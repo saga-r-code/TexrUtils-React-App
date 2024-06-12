@@ -138,12 +138,15 @@ const TextForm = ({
         <p>Words is : {wordcount(text)} and Character is : {text.length}</p>
         {/* <p>Words is : {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} and Character is : {text.length}</p> e */}
         {/* //you can also us if element == 0 than not exist in array otherwise exist */}
-
         <p>Minutes to read : {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
-        <h2 className="text-lg font-semibold md:font-bold mt-5">Preview</h2>
-        <p>
-          {text.length > 0 ? text : "Nothing to preview..."}
+
+        <div className={`bg-${togglemode}  border-cyan-950 border-2 mt-5 py-4 px-3`}>
+        <h2 className="text-lg font-semibold md:font-bold ">Preview</h2>
+        <p className=" overflow-x-scroll "> 
+        {text.length > 0 ? text : "Nothing to preview..."}
         </p>
+        </div>
+
       </div>
     </>
   );
