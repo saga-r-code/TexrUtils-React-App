@@ -32,7 +32,7 @@ const TextForm = ({
     e.preventDefault();
     let newtext = ""; //clear the text
     settext(newtext); //this is for the write value in box
-    showMessage("Text Cleared");
+    showMessage("Successfully text cleared");
   };
 
   //Word count

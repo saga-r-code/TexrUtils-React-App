@@ -8,8 +8,8 @@ const Alert = ({ message = null }) => {
   }
    else {
     return (
-      <div>
-      <p className="w-1/4 h-[10%] z-10 flex justify-center items-center bg-slate-500 text-white absolute top-1 left-[38%] rounded-xl shadow-lg transform translate-y-1 translate-x-1">
+      <div className="flex justify-center items-center">
+      <p className=" p-4 z-10 md:top-4 md:p-5 lg:p-6 xl:px-7 xl:py-6  bg-slate-300 text-gray-800 font-semibold absolute top-1  rounded-xl shadow-lg ">
         {message}
       </p>
     </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import	image from '../Assets/Color Mode.png'
 import logo from '../Assets/Main-Logo.png'
 
 const Navbar = ({
   title = "Title Here",
-  aboutText = "About",
+  // aboutText = "About",
   togglemode = "",
 }) => {
   // default
@@ -18,31 +18,41 @@ const Navbar = ({
         <div className="container mx-auto flex justify-between items-center">
           <ul className="flex gap-4 md:gap-5 justify-center items-center">
             <li>
-              <Link className="text-xl md:text-3xl font-bold cursor-pointer" to="/">
+            <a className="text-xl md:text-3xl font-bold cursor-pointer" href="/">
                <img src={logo} alt={title} className="w-24 md:w-28 md:h-6"/>
-              </Link>
+              </a>
+              {/* <Link className="text-xl md:text-3xl font-bold cursor-pointer" to="/">
+               <img src={logo} alt={title} className="w-24 md:w-28 md:h-6"/>
+              </Link> */}
             </li>
             <div className="flex justify-center items-center gap-3 md:gap-5 ">
               <li>
-                <Link
+              <a
+                  className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
+                  href="/"
+                >
+                  Home
+                </a>
+                {/* <Link
                   className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
                   to="/"
                 >
                   Home
-                </Link>
+                </Link> */}
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
                   to="/about"
                 >
                   {aboutText}
                 </Link>
-              </li>
+              </li> */}
             </div>
           </ul>
 
           <div className="switch flex gap-5  w-full cursor-pointer justify-center items-center absolute right-0 top-14 px-4 py-2 bg-blue-200 md:p-0 md:bg-transparent md:w-fit  md:static md:flex-row ">
+            <p className="font-semibold hidden md:block">ColorMode:-</p>
             <div className="bg-red-700  w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('red')}}></div>
             <div className="bg-green-700  w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('green')}}></div>
             <div className="bg-yellow-900 w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('#5C4033')}}></div>
