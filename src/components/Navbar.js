@@ -18,7 +18,7 @@ const Navbar = ({
         <div className="container mx-auto flex justify-between items-center">
           <ul className="flex gap-4 md:gap-5 justify-center items-center">
             <li>
-            <a className="text-xl md:text-3xl font-bold cursor-pointer" href="/">
+            <a className="text-xl md:text-3xl font-bold cursor-pointer" href="#">
                <img src={logo} alt={title} className="w-24 md:w-28 md:h-6"/>
               </a>
               {/* <Link className="text-xl md:text-3xl font-bold cursor-pointer" to="/">
@@ -29,7 +29,7 @@ const Navbar = ({
               <li>
               <a
                   className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
-                  href="/"
+                  href="#"
                 >
                   Home
                 </a>
