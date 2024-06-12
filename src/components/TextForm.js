@@ -71,22 +71,22 @@ const TextForm = ({
   return (
     <>
       <div className={`conatiner text-${togglemode}`}>
-        <form className="w-1/2 m-auto mt-5">
+        <form className="w-10/12 md:w-1/2 m-auto mt-5">
          
-          <h1 className="text-xl font-bold pt-10 pb-5 underline underline-offset-8 decoration-double">{heading}</h1>
+          <h1 className="w-full text-lg md:text-xl md:font-bold pt-10 pb-5 underline underline-offset-5 decoration-double">{heading}</h1>
           <textarea
             id="message"
             value={text}
             onChange={handlechange}
             rows="8"
             placeholder="Enable the button, than enter text here...."
-            className={`w-full px-3 py-2 bg-gray-500 border  rounded-lg focus:outline-blue-950 focus:shadow-outline placeholder:text-slate-950 placeholder:font-semibold`}
+            className={`w-full px-3 py-2 bg-gray-400 border  rounded-lg focus:outline-blue-950 focus:shadow-outline placeholder:text-slate-900 placeholder:font-semibold`}
           ></textarea>
 
-          <div className="btn my-3 grid grid-cols-3  gap-3 ">
+          <div className="btn text-white grid-cols-1 gap-3 my-3 grid md:grid-cols-2 lg:grid-cols-3   ">
             <button
              disabled ={text.length === 0}
-              className="py-2 px-5 bg-blue-700 text-white font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
+              className="py-2 px-4 bg-blue-700  font-semibold md:font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
               onClick={handleclickupper}
             >
               Convert to Uppercase
@@ -94,7 +94,7 @@ const TextForm = ({
 
             <button
             disabled ={text.length === 0}
-              className="py-2 px-5 bg-blue-700 text-white font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
+              className="py-2 px-5 bg-blue-700  font-semibold md:font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
               onClick={handleclicklower}
             >
               Convert to LowerCase
@@ -102,7 +102,7 @@ const TextForm = ({
 
             <button
              disabled ={text.length === 0}
-              className="py-2 px-5 bg-blue-700 text-white font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
+              className="py-2 px-5 bg-blue-700  font-semibold md:font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
               onClick={handleclear}
             >
               Clear Text
@@ -110,12 +110,12 @@ const TextForm = ({
 
             <button
              disabled ={text.length === 0}
-              className="py-2 px-5 bg-blue-700 text-white font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
+              className="py-2 px-5 bg-blue-700  font-semibold md:font-bold rounded-lg shadow-md hover:bg-blue-600   active:bg-blue-900 transition duration-150 ease-in-out"
               onClick={handlecopy}> Copy Text</button>
 
             <button
              disabled ={text.length === 0}
-              className="py-2 px-5 bg-blue-700 text-white font-bold rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-900 transition duration-150 ease-in-out"
+              className="py-2 px-5 bg-blue-700  font-semibold md:font-bold rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-900 transition duration-150 ease-in-out"
               onClick={removeExtraSpaces}
             >
               Remove Extra Spaces
@@ -132,15 +132,15 @@ const TextForm = ({
       </div>
 
       <div
-        className={`conatiner w-1/2 m-auto my-10 `}
+        className={`conatiner w-10/12 md:w-1/2 m-auto my-10 `}
       >
-        <h1 className="  text-xl font-bold mb-3">Text Summary</h1>
+        <h1 className="  text-xl font-semibold md:font-bold mb-1">Text Summary</h1>
         <p>Words is : {wordcount(text)} and Character is : {text.length}</p>
         {/* <p>Words is : {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} and Character is : {text.length}</p> e */}
         {/* //you can also us if element == 0 than not exist in array otherwise exist */}
 
         <p>Minutes to read : {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
-        <h2 className="text-lg font-bold mt-2">Preview</h2>
+        <h2 className="text-lg font-semibold md:font-bold mt-5">Preview</h2>
         <p>
           {text.length > 0 ? text : "Nothing to preview..."}
         </p>

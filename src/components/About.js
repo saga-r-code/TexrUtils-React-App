@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const About = () => {
+const About = ({togglemode}) => {
   return (
-    <div className="p-2 my-20 m-auto w-1/2">
-      <section className={``}>
+    <div className={`p-2 my-20 m-auto md:w-1/2 text-${togglemode}`}>
+      <section>
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold">
             <u>Transforming Text, Transforming Lives</u>

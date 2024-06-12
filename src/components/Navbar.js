@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import	image from '../Assets/Color Mode.png'
+import logo from '../Assets/Main-Logo.png'
 
 const Navbar = ({
   title = "Title Here",
@@ -15,16 +16,16 @@ const Navbar = ({
         className={`bg-blue-950 text-white p-2 md:p-4`}
       >
         <div className="container mx-auto flex justify-between items-center">
-          <ul className="flex gap-4 md:gap-10 justify-center items-center">
+          <ul className="flex gap-4 md:gap-5 justify-center items-center">
             <li>
               <Link className="text-xl md:text-3xl font-bold cursor-pointer" to="/">
-                {title}
+               <img src={logo} alt={title} className="w-24 md:w-28 md:h-6"/>
               </Link>
             </li>
             <div className="flex justify-center items-center gap-3 md:gap-5 ">
               <li>
                 <Link
-                  className="hover:underline active:underline visited:underline focus:underline"
+                  className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
                   to="/"
                 >
                   Home
@@ -32,7 +33,7 @@ const Navbar = ({
               </li>
               <li>
                 <Link
-                  className="hover:underline active:underline visited:underline focus:underline"
+                  className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
                   to="/about"
                 >
                   {aboutText}
