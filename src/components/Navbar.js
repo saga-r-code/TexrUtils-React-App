@@ -8,7 +8,8 @@ const Navbar = ({
   aboutText = "About",
   togglemode = "",
 }) => {
-  // default
+  
+  
   return (
     <div>
       <nav
@@ -41,7 +42,7 @@ const Navbar = ({
             </div>
           </ul>
 
-          <div className="switch hidden md:flex gap-5 cursor-pointer">
+          <div className="switch flex gap-5 cursor-pointer justify-center items-center absolute right-0 top-14 px-4 py-2 bg-blue-200 md:p-0 md:bg-transparent  md:static md:flex-row ">
             <div className="bg-red-700  w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('red')}}></div>
             <div className="bg-green-700  w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('green')}}></div>
             <div className="bg-yellow-900 w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('#5C4033')}}></div>
@@ -50,7 +51,7 @@ const Navbar = ({
             <div className="bg-white w-8 h-8 rounded-full shadow-lg hover:shadow-gray-500" onClick={()=>{togglemode('white')}}></div>
           </div>
 
-          <div className="img visible md:hidden">
+          <div className="img  md:hidden">
             <img src={image} alt="colorMode" className="w-12 h-10 mix-blend-screen" />
           </div>
         </div>
