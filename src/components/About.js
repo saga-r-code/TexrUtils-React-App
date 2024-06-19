@@ -33,7 +33,7 @@ const About = ({ togglemode }) => {
         </div>
       </section>
 
-      <div className="flex justify-end items-end p-2">
+      <div className="flex justify-end items-end p-2 my-6">
         <footer className="footer text-sm ">
           <p>&copy; 2024 TextUtils. All rights reserved.</p>
           <p>
