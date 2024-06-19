@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const About = ({togglemode}) => {
+import { Link } from "react-router-dom";
+
+const About = ({ togglemode }) => {
   return (
-    <div className={`p-2 my-20 m-auto md:w-1/2 text-${togglemode}`}>
+    <div className={`p-2 my-20 m-auto md:w-8/12 text-${togglemode}`}>
       <section>
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold">
@@ -18,11 +20,11 @@ const About = ({togglemode}) => {
         </div>
       </section>
 
-      <section
-        className={` py-20`}
-      >
+      <section className={` py-20`}>
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold"><u>Unlock the Power of Text</u></h2>
+          <h2 className="text-4xl font-bold">
+            <u>Unlock the Power of Text</u>
+          </h2>
           <p className="mt-4 text-lg">
             Join the TextUtils community and discover how our text-based tools
             and services can help you achieve your goals, whether personal or
@@ -30,6 +32,24 @@ const About = ({togglemode}) => {
           </p>
         </div>
       </section>
+
+      <div className="flex justify-end items-end p-2">
+        <footer className="footer text-sm ">
+          <p>&copy; 2024 TextUtils. All rights reserved.</p>
+          <p>
+            Designed and developed by&nbsp;
+            <Link
+              to="https://github.com/saga-r-code"
+              className="cursor-pointer"
+              target="_blank"
+            >
+              <b>
+                <u>Sagar Shah</u>
+              </b>
+            </Link>
+          </p>
+        </footer>
+      </div>
     </div>
   );
 };

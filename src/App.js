@@ -1,10 +1,10 @@
 import { useState } from "react";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-// import About from "./components/About";
+import About from "./components/About";
 
 function App() {
   const [message, setmessage] = useState(null);
@@ -40,48 +40,34 @@ function App() {
     }, 2000);
   };
   return (
-    // <Router>
-    //   {/* value Passing Throw Props */}
-    //   <Navbar
-    //     title="Logo Here"
-    //     service="Help-Page"
-    //     togglemode={togglemode}
-    //     removeColorMode={removeColorMode}
-    //   />
-    //   <Alert message={message} />
-    //   <Routes>
-    //     <Route
-    //       path="/"
-    //       element={
-    //         <TextForm
-    //           togglemode={togglemode}
-    //           removeColorMode={removeColorMode}
-    //           showMessage={showMessage}
-    //         />
-    //       }
-    //     />
-    //     <Route
-    //       path="/about"
-    //       element={
-    //         <About togglemode={togglemode} removeColorMode={removeColorMode} />
-    //       }
-    //     />
-    //   </Routes>
-    // </Router>
-    <>
-     <Navbar
+    <Router>
+      {/* value Passing Throw Props */}
+      <Navbar
         title="Logo Here"
         service="Help-Page"
         togglemode={togglemode}
         removeColorMode={removeColorMode}
       />
       <Alert message={message} />
-      <TextForm
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <TextForm
               togglemode={togglemode}
               removeColorMode={removeColorMode}
               showMessage={showMessage}
             />
-    </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <About togglemode={togglemode} removeColorMode={removeColorMode} />
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 

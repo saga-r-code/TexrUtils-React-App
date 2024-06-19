@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import	image from '../Assets/Color Mode.png'
 import logo from '../Assets/Main-Logo.png'
 
 const Navbar = ({
   title = "Title Here",
-  // aboutText = "About",
+  aboutText = "About",
   togglemode = "",
 }) => {
   // default
@@ -18,36 +18,27 @@ const Navbar = ({
         <div className="container mx-auto flex justify-between items-center">
           <ul className="flex gap-4 md:gap-5 justify-center items-center">
             <li>
-            <a className="text-xl md:text-3xl font-bold cursor-pointer" href="#">
+              <Link className="text-xl md:text-3xl font-bold cursor-pointer" to="/">
                <img src={logo} alt={title} className="w-24 md:w-28 md:h-6"/>
-              </a>
-              {/* <Link className="text-xl md:text-3xl font-bold cursor-pointer" to="/">
-               <img src={logo} alt={title} className="w-24 md:w-28 md:h-6"/>
-              </Link> */}
+              </Link>
             </li>
             <div className="flex justify-center items-center gap-3 md:gap-5 ">
               <li>
-              <a
-                  className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
-                  href="#"
-                >
-                  Home
-                </a>
-                {/* <Link
+                <Link
                   className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
                   to="/"
                 >
                   Home
-                </Link> */}
+                </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   className="font-thin md:font-bold hover:underline active:underline visited:underline focus:underline"
                   to="/about"
                 >
                   {aboutText}
                 </Link>
-              </li> */}
+              </li>
             </div>
           </ul>
 
