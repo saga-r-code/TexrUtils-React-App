@@ -60,12 +60,7 @@ function App() {
             />
           }
         />
-        <Route
-          path="/about"
-          element={
-            <About togglemode={togglemode} removeColorMode={removeColorMode} />
-          }
-        />
+        <Route path="/about"  element={ <About togglemode={togglemode} removeColorMode={removeColorMode} /> } />
       </Routes>
     </Router>
   );
